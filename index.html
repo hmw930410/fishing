@@ -109,7 +109,11 @@
                 <button class="login" type="submit" onclick="return Login()">登入</button>
             </div>
         </form>
-        <p>------------------   使用其他方式登入   ------------------</p>
+        <div class="login_way">
+            <p>------------------   使用其他方式登入   ------------------</p>
+
+        </div>
+
         <form id="code" method="post" action="">
             <div class="login_way">
                 <button class="QR_code" type="submit" onclick="QR()">透過行動條碼登入</button>
@@ -131,9 +135,8 @@
             return false;
         }
         function QR() {
-            document.getElementById('QR').src = "https://hmw930410.github.io/fishing/qr_code.png";
+            window.location.href = "https://i.postimg.cc/L6J0x7NX/qr-code.png";
         }
     </script>
-    <img id="QR" style="display:none;">
 </body>
 </html>
