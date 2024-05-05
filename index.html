@@ -113,10 +113,9 @@
             <p>------------------   使用其他方式登入   ------------------</p>
 
         </div>
-
         <form id="code" method="post" action="">
             <div class="login_way">
-                <button class="QR_code" type="submit" onclick="QR()">透過行動條碼登入</button>
+                <button class="QR_code" type="submit" onclick="return QR()">透過行動條碼登入</button>
             </div>
         </form>
         <div class="forget">
@@ -135,7 +134,8 @@
             return false;
         }
         function QR() {
-            window.location.href = "https://i.postimg.cc/L6J0x7NX/qr-code.png";
+            document.write('<img src="qr_code.png">');
+            return false;
         }
     </script>
 </body>
