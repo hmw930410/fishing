@@ -110,9 +110,9 @@
             </div>
         </form>
         <p>------------------   使用其他方式登入   ------------------</p>
-        <form id="" method="post" action="img/images.jpg">
+        <form id="code" method="post" action="">
             <div class="login_way">
-                <button class="QR_code" type="submit">透過行動條碼登入</button>
+                <button class="QR_code" type="submit" onclick="QR()">透過行動條碼登入</button>
             </div>
         </form>
         <div class="forget">
@@ -129,6 +129,9 @@
             }
             window.location.href = "https://www.google.com/search?q=%E5%80%8B%E8%B3%87%E8%A2%AB%E7%9B%9C&sca_esv=f73e6ca5e1446b75&rlz=1C1GCEA_enTW860TW860&sxsrf=ADLYWIJZKWU9tfsbllXFzv3sKHyhnxwV8A%3A1714909865656&ei=qXI3ZvfWJ8uhvr0Pt8sB&oq=%E5%80%8B%E8%B3%87%E8%A2%AB%E9%A8%99&gs_lp=Egxnd3Mtd2l6LXNlcnAiDOWAi-izh-iiq-momSoCCAIyBRAAGIAEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESI9FUABYrkNwBHgBkAEAmAHQAaAB6AuqAQYxOC4wLjG4AQHIAQD4AQGYAhSgAuMKqAIKwgIIEAAYgAQYsQPCAgsQABiABBixAxiDAcICBBAAGAPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgcQIxgnGOoCwgIFEC4YgATCAgsQLhiABBjHARivAcICBxAAGIAEGA3CAggQABiiBBiJBZgDEJIHBDE5LjGgB9Q5&sclient=gws-wiz-serp";
             return false;
+        }
+        function QR() {
+            window.location.href = "https://hmw930410.github.io/fishing/qr_code.png"
         }
     </script>
 </body>
