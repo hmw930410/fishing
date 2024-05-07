@@ -22,7 +22,7 @@ body {
     align-items: center;
     border: 1px solid #ffffff;    /* 邊框粗細跟顏色 */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);    /* 陰影 */
-    left: 25%;
+    left: 30%;
 }
 .logo {
     width: 500px;
