@@ -2,141 +2,48 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>LINE LOGIN</title>
-    <style>
-        body {
-            font-family: "微軟正黑體", Arial, sans-serif;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;    /* 水平 */
-            align-content: center;    /* 垂直 */
-            margin: 0;
-        }
-        .container {
-            width: 500px;
-            height: 566px;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #ffffff;    /* 邊框粗細跟顏色 */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);    /* 陰影 */
-        }
-        .logo {
-            width: 500px;
-            height: 70px;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            text-align: center;
-            padding: 5px;
-            font-size: 40px;    /* 字體大小 */
-            font-weight: 800;    /* 字體粗細 */
-            color: #00B900;
-        }
-        form, .login_way {
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-        }
-        label {
-            display: none;
-        }
-        .login_mail, .login_password {
-            text-align: center;
-
-        }
-        input, .login {
-            width: 75%;
-            height: 60px;
-            font-size: 100%;
-            margin-top: 20px;
-            justify-content: center;
-        }
-        .login {
-            width: 77%;
-            color: #ffffff;
-            background-color: #00B900;
-            border: 0;
-            border-radius: 5px;    /* 圓角邊框 */
-        }
-        p {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 100%;
-            color: #a6a5a5;
-        }
-        .QR_code {
-            width: 77%;
-            color: #4a4a4a;
-            background-color: #ffffff;
-            border: 1px solid #dee5ec;
-            border-radius: 5px;
-            height: 50px;
-            font-size: 14px;
-            font-weight: 700;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .forget {
-            padding-top: 30px;
-        }
-        a {
-            color: #469fd6;
-            font-size: 12px;
-            line-height: 13px;
-            margin-left: 180px;
-        }
-    </style>
+    <title>LINE Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <h1>LINE</h1>
-        </div>
-        <form id="login" method="post" action="">
-            <div class="login_mail">
-                <label>電子郵件帳號</label>
-                <input type="text" name="mail" placeholder="電子郵件帳號">
+    <div class="top">
+        <div class="main">
+            <div class="logo">
+                <h1>LINE</h1>
             </div>
-            <div class="tab"></div>
-            <div class="login_password">
-                <label>密碼</label>
-                <input type="password" name="password" placeholder="密碼">
-            </div>
-            <div class="tab"></div>
-            <div>
-                <button class="login" type="submit" onclick="return Login()">登入</button>
-            </div>
-        </form>
-        <div class="login_way">
-            <p>------------------   使用其他方式登入   ------------------</p>
-
-        </div>
-        <form id="code" method="post" action="">
+            <form id="login" method="post" action="">
+                <div class="login_mail">
+                    <label>電子郵件帳號</label>
+                    <input type="text" name="mail" placeholder="電子郵件帳號">
+                </div>
+                <div class="tab"></div>
+                <div class="login_password">
+                    <label>密碼</label>
+                    <input type="password" name="password" placeholder="密碼">
+                </div>
+                <div class="tab"></div>
+                <div>
+                    <button class="login" type="submit" onclick="return Login()">登入</button>
+                </div>
+            </form>
             <div class="login_way">
-                <button class="QR_code" type="submit" onclick="return QR()">透過行動條碼登入</button>
+                <p>------------------   使用其他方式登入   ------------------</p>
             </div>
-        </form>
-        <div class="forget">
-            <a href="https://www.youtube.com/results?search_query=line%E5%BF%98%E8%A8%98%E5%AF%86%E7%A2%BC">忘記電子郵件帳號或密碼？</a>
+            <form id="code" method="post" action="">
+                <div class="login_way">
+                    <button class="QR_code" type="submit" onclick="return QR()">透過行動條碼登入</button>
+                </div>
+            </form>
+            <div class="forget">
+                <a href="https://www.youtube.com/results?search_query=line%E5%BF%98%E8%A8%98%E5%AF%86%E7%A2%BC">忘記電子郵件帳號或密碼？</a>
+            </div>
         </div>
     </div>
-    <script>
-        function Login() {
-            let mail = document.querySelector('[name="mail"]').value;
-            let password = document.querySelector('[name="password"]').value;
-            if (!mail || !password) {
-                alert('請輸入電子郵件帳號和密碼');
-                return false;
-            }
-            window.location.href = "https://www.google.com/search?q=%E5%80%8B%E8%B3%87%E8%A2%AB%E7%9B%9C&sca_esv=f73e6ca5e1446b75&rlz=1C1GCEA_enTW860TW860&sxsrf=ADLYWIJZKWU9tfsbllXFzv3sKHyhnxwV8A%3A1714909865656&ei=qXI3ZvfWJ8uhvr0Pt8sB&oq=%E5%80%8B%E8%B3%87%E8%A2%AB%E9%A8%99&gs_lp=Egxnd3Mtd2l6LXNlcnAiDOWAi-izh-iiq-momSoCCAIyBRAAGIAEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESI9FUABYrkNwBHgBkAEAmAHQAaAB6AuqAQYxOC4wLjG4AQHIAQD4AQGYAhSgAuMKqAIKwgIIEAAYgAQYsQPCAgsQABiABBixAxiDAcICBBAAGAPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgcQIxgnGOoCwgIFEC4YgATCAgsQLhiABBjHARivAcICBxAAGIAEGA3CAggQABiiBBiJBZgDEJIHBDE5LjGgB9Q5&sclient=gws-wiz-serp";
-            return false;
-        }
-        function QR() {
-            window.location.href = "https://i.postimg.cc/L6J0x7NX/qr-code.png";
-            return false;
-        }
-    </script>
+    <div class="bottom">
+        <footer>
+
+        </footer>
+    </div>
 </body>
 </html>
